@@ -80,22 +80,15 @@ event-booking-system/
 │   └── package.json
 │
 └── README.md
-
+```
 ---
 
-📋 Prerequisites
-
+## 📋 Prerequisites
 Before running the application, ensure you have:
-
-Node.js (v18.0.0 or higher)
-
-npm (v9.0.0 or higher)
-
-MongoDB Atlas account or local MongoDB installation
-
-Stripe API Keys (Test mode)
-
-
+* **Node.js**: (v18.0.0 or higher)
+* **npm**: (v9.0.0 or higher)
+* **MongoDB**: Atlas account or local installation
+* **Stripe**: API Keys (Test mode)
 
 ### 🛠️ Installation & Setup
 
