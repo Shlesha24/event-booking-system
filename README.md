@@ -164,7 +164,7 @@ http://localhost:5173
 * **Input Validation**: Backend checks for empty fields and slot availability before finalizing bookings.
 
 ## 👨‍💻 Author
-**Shlesha Kasoju** Software Developer Intern Assignment — **SmartWinnr**
+* **[@Shlesha-Kasoju](https://github.com/Shlesha24)** — Software Developer Intern Assignment — **SmartWinnr**
 
 ## 🙏 Acknowledgments
 * **SmartWinnr HR Team** for the opportunity.
