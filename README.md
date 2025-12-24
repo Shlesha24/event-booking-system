@@ -96,9 +96,11 @@ MongoDB Atlas account or local MongoDB installation
 Stripe API Keys (Test mode)
 
 
-🛠️ Installation & Setup
+
+### 🛠️ Installation & Setup
 
 Clone the Repository
+
 ```bash
 git clone https://github.com/Shlesha24/event-booking-system.git   
 cd event-booking-system
@@ -147,35 +149,30 @@ http://localhost:5173
 
 ---
 
-📊 Database Schema
+## 📊 Database Schema
 
-Event Model
+### 📅 Event Model
+* **title**: String (Required)
+* **description**: String (Required)
+* **location / city**: String (Required)
+* **price**: Number (Required)
+* **date**: Date (Required)
+* **totalSlots / bookedSlots**: Number (Availability tracking)
 
-title: String (Required)
-description: String (Required)
-location / city: String (Required)
-price: Number (Required)
-date: Date (Required)
-totalSlots / bookedSlots: Number (Availability tracking)
+### 👤 User Model
+* **name**: String (Required)
+* **email**: String (Unique)
+* **password**: String (Hashed using bcrypt)
+* **isAdmin**: Boolean (Default: false)
 
-User Model
+## 🔐 Security Features
+* **Bcrypt.js**: Passwords are never stored in plain text.
+* **JWT Authentication**: Tokens are sent in headers to authorize protected actions.
+* **Input Validation**: Backend checks for empty fields and slot availability before finalizing bookings.
 
-name: String (Required)
-email: String (Unique)
-password: String (Hashed using bcrypt)
-isAdmin: Boolean (Default: false)
+## 👨‍💻 Author
+**Shlesha Kasoju** Software Developer Intern Assignment — **SmartWinnr**
 
-🔐 Security Features
-Bcrypt.js: Passwords are never stored in plain text.
-
-JWT Authentication: Tokens are sent in headers to authorize protected actions.
-
-Input Validation: Backend checks for empty fields and slot availability before finalizing bookings.
-
-👨‍💻 Author
-Shlesha Kasoju
-Software Developer Intern Assignment – SmartWinnr
-
-🙏 Acknowledgments
-SmartWinnr HR Team for the opportunity.
-Stripe Documentation for payment integration guides.
+## 🙏 Acknowledgments
+* **SmartWinnr HR Team** for the opportunity.
+* **Stripe Documentation** for payment integration guides.
