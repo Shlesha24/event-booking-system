@@ -95,19 +95,28 @@ MongoDB Atlas account or local MongoDB installation
 
 Stripe API Keys (Test mode)
 
----
 
 🛠️ Installation & Setup
 
-1. Clone the Repository
+Clone the Repository
+```bash
 git clone https://github.com/Shlesha24/event-booking-system.git   
 cd event-booking-system
-2. Backend Setup
+```
+
+### 🔹 Backend setup commands 
 Navigate to the backend directory:
+
+```bash
 cd backend
 npm install
+```
+
+### 🔹 .env file 
+
 Create a .env file in the backend folder:
 
+```env
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.xatfnb7.mongodb.net/event_booking
 JWT_SECRET=your_jwt_secret_key
@@ -115,19 +124,24 @@ STRIPE_SECRET_KEY=your_stripe_test_secret_key
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_gmail_app_password
 FRONTEND_URL=http://localhost:5173
+```
 
-Start the backend server:
+### Backend Server
 
+```bash
 npm start
+```
+
 Backend runs on:
 http://localhost:5000
 
-3. Frontend Setup
-Open a new terminal and navigate to the frontend directory:
+### Frontend setup
+```bash
 cd frontend
 npm install
-Start the development server:
 npm run dev
+```
+
 Open in browser:
 http://localhost:5173
 
