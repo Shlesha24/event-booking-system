@@ -46,3 +46,6 @@ app.listen(PORT, () => {
   // Initialize the scheduler
   startScheduler(); 
 });
+
+// Add this for Vercel deployment
+export default app;
