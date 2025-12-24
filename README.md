@@ -90,6 +90,8 @@ Before running the application, ensure you have:
 * **MongoDB**: Atlas account or local installation
 * **Stripe**: API Keys (Test mode)
 
+---
+
 ### 🛠️ Installation & Setup
 
 Clone the Repository
@@ -158,10 +160,56 @@ http://localhost:5173
 * **password**: String (Hashed using bcrypt)
 * **isAdmin**: Boolean (Default: false)
 
+---
+
+## 🎨 Frontend Features
+
+### 🖥️ Pages
+* **Login/Register**: Secure user authentication with real-time form validation.
+* **Events Dashboard**: Browse all available events in a clean, responsive layout.
+* **Event Creation**: Dedicated interface for authorised admin to host new events.
+* **Booking Management**: Personal dashboard to track and manage your reserved slots.
+
+### 🧩 Components
+* **EventCard**: Dynamic component displaying event details, pricing, and real-time seat availability.
+* **Navbar**: Responsive navigation with conditional rendering for Guest vs. Authenticated users.
+* **ProtectedRoute**: High-order component ensuring private pages are only accessible to logged-in users.
+* **Loading Spinner**: Custom CSS-based indicator for asynchronous data fetching.
+* **Stripe Checkout**: Integrated payment modal for secure ticket purchasing.
+
+---
+
+## 🔐 Authentication Flow
+
+1.  **Registration**: User signs up with name, email, and password.
+2.  **Encryption**: Passwords are encrypted using **Bcrypt.js** before being saved to MongoDB.
+3.  **Login**: System verifies credentials and generates a **JSON Web Token (JWT)**.
+4.  **Token Storage**: The JWT is stored in the client's `localStorage`.
+5.  **Authorization**: The token is sent in the `Authorization` header for protected API routes (like creating events or booking).
+6.  **Middleware**: Backend middleware validates the token to ensure the user is authorized.
+
+---
+
+## 🚀 Deployment
+
+### ⚙️ Backend Deployment (Node.js)
+* **Database**: Ensure **MongoDB Atlas** IP Whitelist allows access from all IPs (`0.0.0.0/0`).
+* **Environment**: Set `NODE_ENV=production` and update the `FRONTEND_URL` to your production domain.
+* **Platform**: Recommended for Render, Railway, or Heroku.
+
+### 💻 Frontend Deployment (React)
+* **Build**: Run `npm run build` to generate the production-ready `dist` folder.
+* **Environment**: Update your `.env` to point `VITE_API_URL` to your live backend URL.
+* **Platform**: Recommended for Vercel, Netlify, or GitHub Pages.
+
+---
+
 ## 🔐 Security Features
 * **Bcrypt.js**: Passwords are never stored in plain text.
 * **JWT Authentication**: Tokens are sent in headers to authorize protected actions.
 * **Input Validation**: Backend checks for empty fields and slot availability before finalizing bookings.
+
+---
 
 ## 👨‍💻 Author
 * **[@Shlesha-Kasoju](https://github.com/Shlesha24)** — Software Developer Intern Assignment — **SmartWinnr**
@@ -169,3 +217,11 @@ http://localhost:5173
 ## 🙏 Acknowledgments
 * **SmartWinnr HR Team** for the opportunity.
 * **Stripe Documentation** for payment integration guides.
+
+---
+
+<p align="center">
+  <b>Thank you for the opportunity! 🚀</b>
+  <br />
+  <i>Built by <b><a href="https://github.com/Shlesha24">@Shlesha-Kasoju</a></b></i>
+</p>
