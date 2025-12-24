@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.custom-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif;
+}
+.react-calendar__tile--active {
+  background: #2563eb !important; /* Blue to match your theme */
+  border-radius: 8px;
+}
